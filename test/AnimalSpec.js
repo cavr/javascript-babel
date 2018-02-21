@@ -32,6 +32,7 @@ describe('Animal', () => {
     it('Should have dog', () => {
       const animal = new Animal('Dog');
       const message = animal.haveDog();
+      Animal.sayHola();
       expect(message).to.be.equal('Welcome, "Dog" your {"name":"Guest"}');
     });
 
