@@ -7,8 +7,9 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-import { expect } from 'chai';
-import Person from '../src/Person';
+const expect = require('chai').expect;
+
+const Person = require('../src/Person');
 
 describe('Person', () => {
 

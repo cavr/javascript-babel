@@ -8,4 +8,4 @@ class Person {
     return `Welcome, ${this.name}!`;
   }
 }
-export default Person;
+module.exports = Person;

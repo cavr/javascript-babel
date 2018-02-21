@@ -1,4 +1,4 @@
-import Person from '../src/Person';
+const Person = require('../src/Person');
 
 class Animal {
   constructor(animal) {
@@ -15,4 +15,4 @@ class Animal {
   }
 }
 
-export default Animal;
+module.exports = Animal;

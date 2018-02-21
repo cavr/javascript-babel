@@ -7,8 +7,8 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-import { expect } from 'chai';
-import Animal from '../src/Animal';
+const expect = require('chai').expect;
+const Animal = require('../src/Animal');
 
 describe('Animal', () => {
 
@@ -28,8 +28,8 @@ describe('Animal', () => {
 
   });
 
-  describe('Animal have dog', () =>{
-    it('Should have dog', () =>{
+  describe('Animal have dog', () => {
+    it('Should have dog', () => {
       const animal = new Animal('Dog');
       const message = animal.haveDog();
       expect(message).to.be.equal('Welcome, "Dog" your {"name":"Guest"}');
