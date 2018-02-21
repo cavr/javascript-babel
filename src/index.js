@@ -7,4 +7,9 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-export Person from './Person.js';
+const Person = require('../src/Person');
+
+const Animal = require('../src/Animal');
+
+module.exports.Person = Person;
+module.exports.Animal = Animal;
