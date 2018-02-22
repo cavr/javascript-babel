@@ -8,7 +8,6 @@
  */
 
 const Person = require('../src/Person');
-
 const Animal = require('../src/Animal');
 
 module.exports.Person = Person;
