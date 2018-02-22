@@ -18,12 +18,11 @@ class Animal {
     return `Welcome, ${JSON.stringify(this.animal)} your ${JSON.stringify(this.person)}`;
   }
 
-  static sayHola() {
+  static sayHola(callback) {
     const inputFile = 'src/example.txt';
-    let csvArrayObject = [];
     const parser = parse({ delimiter: ';' }, (err, data) => {
       async.eachSeries(data, () => {
-        csvArrayObject = this.arrayToObject(data);
+        callback(this.arrayToObject(data));
       });
     });
     fs.createReadStream(inputFile).pipe(parser);
@@ -38,8 +37,6 @@ class Animal {
       }
       csvArrayObject.push(csvObject);
     }
-    console.log(JSON.stringify(csvArrayObject));
-    console.log(data);
     return csvArrayObject;
   }
 }

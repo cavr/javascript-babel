@@ -10,6 +10,15 @@
 const expect = require('chai').expect;
 const Animal = require('../src/Animal');
 
+function check(done, f) {
+  try {
+    f();
+    done();
+  } catch (e) {
+    done(e);
+  }
+}
+
 describe('Animal', () => {
 
   describe('Animal.hello()', () => {
@@ -29,13 +38,13 @@ describe('Animal', () => {
   });
 
   describe('Animal have dog', () => {
-    it('Should have dog', () => {
+    it('Should have dog', (done) => {
       const animal = new Animal('Dog');
       const message = animal.haveDog();
-      Animal.sayHola();
-      expect(message).to.be.equal('Welcome, "Dog" your {"name":"Guest"}');
+      Animal.sayHola((data) => {
+        check(done, () => { expect(data).to.be.equal([]); });
+      });
     });
-
   });
 
 });
