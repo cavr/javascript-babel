@@ -42,7 +42,9 @@ describe('Animal', () => {
       const animal = new Animal('Dog');
       const message = animal.haveDog();
       Animal.sayHola((data) => {
-        check(done, () => { expect(data).to.be.equal([]); });
+        check(done, () => {
+          expect(data.length).to.be.equal(8);
+        });
       });
     });
   });
