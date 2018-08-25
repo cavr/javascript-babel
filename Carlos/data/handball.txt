@@ -1,0 +1,7 @@
+Basketball; ; ; ; ; ;
+player1;nick1;4;TeamA;G;0;20
+player2;nick2;8;Team;F;15;20
+player3;nick3;15;TeamA;F;10;20
+player4;nick4;16;TeamB;G;1;25
+player5;nick5;23;TeamB;F;12;25
+player6;nick6;42;TeamB;F;8;25
